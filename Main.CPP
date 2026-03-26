@@ -1,6 +1,11 @@
 // Gavyn Garza Coding I Spring 2026
 // This file is my first C++ program
 
+// to compile, open the developer command prompt for vs 2022
+// nav to this folder with cd for change directory
+// use the cmd "cl /EHsc filename.cpp" this is "main.cpp"
+// then type "filename" to run the .exe this is "main"
+
 #include <iostream>    // in out stream, for sending text to the console.
 #include <string>      // for player name
 
@@ -19,7 +24,7 @@ int main() {
     // assign what the player types as the value of playerName
     cin >> playerName;
 
-    
+
     // greet the player by name
     cout << "Hello, " << playerName << "." << endl;
 
