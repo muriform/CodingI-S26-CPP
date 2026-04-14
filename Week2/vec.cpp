@@ -13,12 +13,28 @@ using namespace std;
 
 int main() {
     cout << "Let's learn about vectors!\n";
-     
+
+    // 4/14/26
+    // DONE make a global-ish vector of favs, 
+    // so that we are able to see our changes through the loops.
+
+    // talk about the auto variable type
+    // talk about removing with .erase()
+    // talk about sorting with sort()
+    // then start homework
+
+    // exists out of the do while,
+    // so it wont be destroyed
+    vector<string> favGames = {"Minecraft", "Subnautica", "Breath of the Wild", "Animal Crossing"};
+
     string input;
+
+    
+     
 
     do {
         cout << "What would you like to do?\n";
-        cout << "You can type 'quit', 'push', 'find'.\n";
+        cout << "You can type 'quit', 'push', 'find', 'remove'.\n";
 
         getline(cin, input);    // get input from player
 
@@ -108,12 +124,38 @@ int main() {
             }
 
 
-        }
+        } // end of find
 
         else if(input == "quit") {
             cout << "Thanks for playing.\n";
             break;
-        }
+        } // end of quit
+        else if(input == "remove") {
+            // sort the favgames vector alphabetically
+            sort(favGames.begin(), favGames.end());
+            cout << "Here are your favorite Games:\n";
+
+            for(int i = 0; i < favGames.size(); i++) {
+                cout << favGames[i] << endl;
+            }
+
+            cout << "What games would you like to remove from the list?\n";
+            getline(cin, input);
+
+            auto iter = find(favGames.begin(), favGames.end(), input);
+
+            if (iter != favGames.end()) {
+                cout << "We've found that name. Removing now.\n";
+                favGames.erase(iter);
+            
+            }
+
+            cout << "Here are your favorite Games:\n";
+            for(int i = 0; i < favGames.size(); i++) {
+                cout << favGames [i] << endl;
+            }
+
+        } // end of remove
 
         else {
             cout << "I didn't recognise that command.\n";
