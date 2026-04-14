@@ -131,7 +131,7 @@ int main() {
             break;
         } // end of quit
         else if(input == "remove") {
-            // sort the favgames vector alphabetically
+            // sort the favGames vector alphabetically
             sort(favGames.begin(), favGames.end());
             cout << "Here are your favorite Games:\n";
 
