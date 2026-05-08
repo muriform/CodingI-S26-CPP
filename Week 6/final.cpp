@@ -165,11 +165,6 @@ int main() {
     cout << "You named your creature: " <<baby.getName() << endl;
 
     do {
-        // if (baby.getHunger() > 5){
-        //     cout << "FEED ME" << endl;
-        //     cout <<"My hunger level is: " << baby.getHunger();
-        //     cout <<" I CANT FIGHT OR TRAIN IF MY HUNGER IS 10 OR MORE" << endl;
-        // }
         cout << "What would you like to do?\n";
         cout << "You can 'train', 'feed', 'listen', 'battle', or 'end'...\n";
         getline(cin, input);
